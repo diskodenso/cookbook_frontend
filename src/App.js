@@ -1,7 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { client } from "./client";
-// import RouterConfig from "./components/RouterConfig";
+import Recipe from "./components/Recipe";
+import RouterConfig from "./components/RouterConfig";
 
 const App = () => {
   const [recipes, setRecipes] = useState([]);
@@ -25,9 +26,12 @@ const App = () => {
         <h1>Thats our awesome Cookbook</h1>
       </header>
       <main>
+        <Recipe />
         {!recipes && "Loading...."}
         {error && <h2>Oh no, something went wrong</h2>}
-        <div className="block">{recipes && <RouterConfig recipes={recipes} />}</div>
+        <div className="block">
+          {recipes && <RouterConfig recipes={recipes} />}
+        </div>
       </main>
       <footer>
         <h4>we want to have a footer here</h4>

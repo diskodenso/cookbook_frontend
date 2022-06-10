@@ -4,7 +4,7 @@ import { client } from "./client";
 // import RouterConfig from "./components/RouterConfig";
 
 const App = () => {
-  const [recipes, setRecipes] = useState();
+  const [recipes, setRecipes] = useState([]);
   const [error, setError] = useState();
 
   console.log(recipes);
@@ -27,6 +27,7 @@ const App = () => {
       <main>
         {!recipes && "Loading...."}
         {error && <h2>Oh no, something went wrong</h2>}
+        <div className="block">{recipes && <RouterConfig recipes={recipes} />}</div>
       </main>
       <footer>
         <h4>we want to have a footer here</h4>

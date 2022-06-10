@@ -4,6 +4,7 @@ import Recipe from "./Recipe";
 import Landing from "./Landing";
 import Recipes from "./Recipes";
 import About from "./About";
+
 const RouterConfig = ({ recipes }) => {
   return (
     <Routes>

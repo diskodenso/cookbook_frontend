@@ -9,7 +9,7 @@ const Recipes = ({ recipes }) => {
           <img src={recipe.fields.image.fields?.file.url} alt="" width="100%" />
           <p>{recipe.fields.description}</p>
           <Link to={`../${recipe.sys.id}`}>
-            <button id="btn-card"> Read full article</button>
+            <button id="btn-card"> Read full recipe</button>
           </Link>
         </div>
       ))}

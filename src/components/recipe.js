@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 
 const Recipe = ({ recipes }) => {
   const { id } = useParams();
+  console.log(id);
   const selectedRecipe = recipes.find((recipe) => recipe.sys.id === id);
   console.log(selectedRecipe);
   return (
